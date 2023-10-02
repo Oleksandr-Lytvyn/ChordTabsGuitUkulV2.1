@@ -1,9 +1,9 @@
-import { GuitarTabsList } from 'components/GuitarTabsList/GuitarTabsList';
-import { useChord } from 'context/chordContext';
+import { GuitarTabsList } from '../GuitarTabsList/GuitarTabsList';
+import { useChord } from '../../context/chordContext';
 
 export const SideRight = () => {
   const { chord, rotationSet } = useChord();
-  const onClick = e => {
+  const onClick = (e) => {
     e.preventDefault();
     rotationSet(e.target.textContent);
   };

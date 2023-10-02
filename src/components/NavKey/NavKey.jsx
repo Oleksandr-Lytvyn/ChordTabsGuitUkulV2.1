@@ -1,4 +1,4 @@
-import { useChord } from 'context/chordContext';
+import { useChord } from '../../context/chordContext';
 import dbGuitar from '../../db/guitar.json';
 // import dbGUkulele from '../../db/ukulele.json';
 // console.log(dbGUkulele);
@@ -6,7 +6,7 @@ import dbGuitar from '../../db/guitar.json';
 export const NavKey = () => {
   const { instr, keySet, key } = useChord();
 
-  const handleKey = e => {
+  const handleKey = (e) => {
     if (e.target.value === 'C#') {
       keySet('Csharp');
     } else if (e.target.value === 'F#') {
@@ -18,7 +18,7 @@ export const NavKey = () => {
   return (
     <form onChange={handleKey}>
       {instr &&
-        dbGuitar.keys.map(i => {
+        dbGuitar.keys.map((i) => {
           return (
             <label key={i} className="custom-radio">
               <input type="radio" id={i} name="key" value={i} />

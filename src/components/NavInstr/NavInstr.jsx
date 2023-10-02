@@ -1,9 +1,9 @@
-import { useChord } from 'context/chordContext';
+import { useChord } from '../../context/chordContext';
 
 export const NavInstr = () => {
   const { instrSet } = useChord();
 
-  const handleInstr = e => {
+  const handleInstr = (e) => {
     instrSet(e.target.value);
   };
 

@@ -1,14 +1,11 @@
 import { nanoid } from 'nanoid';
-import {
-  StyledChordGuitarWrapper,
-  StyledChordGuitar,
-} from './ChordGuitar.styled';
+import { StyledChordGuitarWrapper, StyledChordGuitar } from './ChordGuitar.styled';
 import * as Tone from 'tone';
-import { getMidiNote } from 'utilites/getMidiNote';
-import { midiToNote } from 'utilites/midiToNote';
-import { useChord } from 'context/chordContext';
-import { Finger } from 'components/Finger/Finger';
-import { Dot } from 'components/Dot/Dot';
+import { getMidiNote } from '../../utilites/getMidiNote';
+import { midiToNote } from '../../utilites/midiToNote';
+import { useChord } from '../../context/chordContext';
+import { Finger } from '../Finger/Finger';
+import { Dot } from '../Dot/Dot';
 
 const positions = {
   1: '5px',
@@ -75,14 +72,14 @@ export const ChordGuitar = ({ steps, midi, play, setNotes, baseFret }) => {
           {dots.map((element, index) => {
             return <Dot key={index} visible={element} step={index + 1} />;
           })}
-          {steps.map(step => {
+          {steps.map((step) => {
             i += 1;
             const midi = getMidiNote(step, i).toString();
             const note = midiToNote[midi];
 
             return (
               <Finger
-                onClick={e => {
+                onClick={(e) => {
                   const synth = new Tone.Synth().toDestination();
                   synth.triggerAttackRelease(note, '8n');
                 }}

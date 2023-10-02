@@ -1,6 +1,6 @@
 import { BoxPosition, StyledPosition, TextPosition } from './Position.styled';
 import { ChordGuitar } from '../ChordGuitar/ChordGuitar';
-import { FretGuitar } from 'components/FretGuitar/FretGuitar';
+import { FretGuitar } from '../FretGuitar/FretGuitar';
 
 export const Position = ({ pos, setNotes }) => {
   const steps = [];
@@ -17,12 +17,7 @@ export const Position = ({ pos, setNotes }) => {
         <TextPosition>base fret {pos.baseFret}</TextPosition>
         <BoxPosition>
           <FretGuitar fret={pos.baseFret} />
-          <ChordGuitar
-            steps={steps}
-            midi={pos.midi}
-            setNotes={setNotes}
-            baseFret={pos.baseFret}
-          />
+          <ChordGuitar steps={steps} midi={pos.midi} setNotes={setNotes} baseFret={pos.baseFret} />
         </BoxPosition>
       </StyledPosition>
     </>
