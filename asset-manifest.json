@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ChordTabsGuitUkulV2.1/static/css/main.073c9b0a.css",
+    "main.js": "/ChordTabsGuitUkulV2.1/static/js/main.88482f12.js",
+    "static/js/787.b9a1270b.chunk.js": "/ChordTabsGuitUkulV2.1/static/js/787.b9a1270b.chunk.js",
+    "static/media/logo.svg": "/ChordTabsGuitUkulV2.1/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ChordTabsGuitUkulV2.1/index.html",
+    "main.073c9b0a.css.map": "/ChordTabsGuitUkulV2.1/static/css/main.073c9b0a.css.map",
+    "main.88482f12.js.map": "/ChordTabsGuitUkulV2.1/static/js/main.88482f12.js.map",
+    "787.b9a1270b.chunk.js.map": "/ChordTabsGuitUkulV2.1/static/js/787.b9a1270b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.88482f12.js"
+  ]
+}
