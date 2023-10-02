@@ -1,3 +1,5 @@
+@import-normalize; /* bring in normalize.css styles */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,88 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.main-section .container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-image: url('https://picsum.photos/200/300');
+  background-size: cover;
+}
+
+.left {
+  flex: 0.9;
+  padding: 20px;
+  background-color: rgba(192, 192, 192, 0.5);
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для кнопок и радио-инпутов */
+.buttons,
+.radio-inputs {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для правой части */
+.right {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100vh;
+  /* opacity: 0.1; */
+}
+
+/* RADIO-INPTS */
+
+.custom-radio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Цвет кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.custom-radio input[type='radio'] {
+  display: none; /* Скрыть сам радиокнопку */
+}
+
+.custom-radio:hover {
+  background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+.custom-radio input[type='radio']:checked + span {
+  background-color: #00a000; /* Цвет кнопки при выборе */
+}
+
+.custom-radio span {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.custom-radio input[type='radio']:checked + span {
+  background-color: #00a000; /* Цвет метки при выборе */
+}
+
+.finger {
+  :hover {
+    cursor: pointer;
+  }
 }
